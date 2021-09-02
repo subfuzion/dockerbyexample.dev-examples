@@ -1,6 +1,13 @@
+
+# dockerbyexample.dev-examples
+
+Companion examples repo for [dockerbyexample.dev](https://dockerbyexample.dev)
+
+## Docker Cheatsheet
+
 [cheatsheet](cheatsheet.md)
 
-# Demo 1 
+## Demo 1 
 
 Run a bash shell in a container and attach a terminal to run
 commands interactively
@@ -32,11 +39,11 @@ Save the container to an image
 
 Create a new container from the image
 
-# Demo 2.1
+## Demo 2.1
 
 [helloworld](./basics/helloworld/)
 
-# Demo 2.2
+## Demo 2.2
 
 [time](./basics/time/)
 
@@ -51,20 +58,20 @@ Using ENTRYPOINT
 
     docker build -f Dockerfile.using_entrypoint -t get-time . 
 
-# Demo 3
+## Demo 3
 
 Introduce docker compose
 
-# Demo 4
+## Demo 4
 
 More complicated compose with replicas
 
-# Demo 5
+## Demo 5
 
 https://github.com/subfuzion/voting-app
 http://bit.ly/voting-app-with-docker
 
-# Demo 6
+## Demo 6
 
 https://hub.docker.com/_/dart
 https://github.com/GoogleCloudPlatform/functions-framework-dart
