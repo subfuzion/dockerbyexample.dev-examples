@@ -1,0 +1,24 @@
+version: "3.9"
+
+networks:
+  overlay:
+
+services:
+
+  web:
+    build: app
+    networks:
+      - overlay
+    ports:
+      - "8080"
+    deploy:
+      mode: replicated
+      replicas: 2
+      endpoint_mode: vip
+
+  tester:
+    depends_on:
+      - web
+    build: tester
+    networks:
+      - overlay

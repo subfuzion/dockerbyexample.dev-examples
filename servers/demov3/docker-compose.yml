@@ -1,0 +1,15 @@
+version: "3.9"
+
+networks:
+  appnet:
+    external: false
+    driver: bridge
+
+services:
+
+  web:
+    build: .
+    networks:
+      - appnet
+    ports:
+      - "8080:8080"

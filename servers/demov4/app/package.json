@@ -1,0 +1,15 @@
+{
+  "name": "demov4",
+  "version": "1.0.0",
+  "description": "Simple Express app that responds with 'hello world' but only handles one route (/)",
+  "author": "Tony Pujals <tonypujals@google.com> (http://twitter.com/tonypujals)",
+  "license": "MIT",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "type": "module",
+  "dependencies": {
+    "express": "^4.17.1",
+    "morgan": "^1.10.0"
+  }
+}
