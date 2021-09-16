@@ -1,4 +1,4 @@
-Demonstrate simple usage of `docker compose`
+v3 adds Docker Compose support.
 
 ```text
 docker compose up

@@ -41,7 +41,7 @@ Create a new container from the image
 
 ## Demo 2.1
 
-[helloworld](./basics/helloworld/)
+[helloworld](basics/hello/)
 
 ## Demo 2.2
 

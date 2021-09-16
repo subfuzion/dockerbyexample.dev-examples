@@ -4,27 +4,28 @@ import morgan from 'morgan';
 const app = express();
 const port = process.env.PORT || 8080;
 
-// add logging middleware
-app.use(morgan('dev'));
+// Add logging middleware (https://expressjs.com/en/resources/middleware/morgan.html).
+app.use(morgan('short'));
 
-// add middleware to reject requests for favicon.ico when testing from browser
+// Add custom middleware to prevent 404 errors by rejecting requests for favicon.ico when testing from browser.
 app.use(function(req, res, next) {
-  // if testing from a browers, ignore request for favicon.ico
+  // Ignore request for favicon.ico when testing from a browser.
   if (req.url === '/favicon.ico') {
     console.log('ignore requests for favicon.ico');
+    // Return HTTP 204 successful request, no content.
     res.status(204).end();
     return;
   }
   next();
 });
 
-// route handler for GET /
+// Root route handler: GET /
 app.get('/', function(req, res) {
   const data = '<h1>hello world</h1>';
   res.send(data);
 });
 
-const server = app.listen(port, () => {
+app.listen(port, () => {
   console.log(`server listening on :${port}`);
 });
 
