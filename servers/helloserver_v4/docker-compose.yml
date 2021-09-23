@@ -1,24 +1,14 @@
 version: "3.9"
 
 networks:
-  overlay:
+  appnet:
+    driver: bridge
+    external: false
 
 services:
-
   web:
-    build: app
+    build: .
     networks:
-      - overlay
+      - appnet
     ports:
-      - "8080"
-    deploy:
-      mode: replicated
-      replicas: 2
-      endpoint_mode: vip
-
-  tester:
-    depends_on:
-      - web
-    build: tester
-    networks:
-      - overlay
+      - "8080:8080"

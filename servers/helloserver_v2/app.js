@@ -21,7 +21,7 @@ app.use(function(req, res, next) {
 
 // Root route handler: GET /
 app.get('/', function(req, res) {
-  const data = '<h1>hello world</h1>';
+  const data = '<h1>hello, world!</h1>';
   res.send(data);
 });
 

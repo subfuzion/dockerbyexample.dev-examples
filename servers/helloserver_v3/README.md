@@ -1,13 +1,17 @@
-v3 adds Docker Compose support.
+v3 adds signal support for proper termination.
 
-```text
-docker compose up
-```
+**Build an image**
 
-When finished, press `Ctrl-C`.
+docker run build -t hello .
 
-To tear everything down:
+**Run a container**
 
-```text
-docker compose rm -f
-```
+docker run --name helloctr -p 8080:8080 hello
+
+**Test**
+
+curl localhost:8080
+
+**Remove the container**
+
+docker rm -f helloctr

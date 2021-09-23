@@ -1,7 +1,4 @@
-Demonstrate usage of `docker compose` with two services sharing a network.
-
-The `tester` service simply calls the web service periodically, demonstrate
-that it can invoke it by its DNS name `web`. 
+v4 adds Docker Compose support.
 
 ```text
 docker compose up
